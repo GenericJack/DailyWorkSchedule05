@@ -1,6 +1,4 @@
-  ````// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+
 $(function () {
 //Add a listener for click events on the save button
 $(".saveBtn").on("click", function () {
@@ -17,7 +15,7 @@ $(".saveBtn").on("click", function () {
   });
 
   // get current hour in 24 - hour format using Day.js
-  var currentHour = dayjs().format("H");
+  var currentHour = parseInt(dayjs().format("H"));
 
   // loop through each time-block and compare with current hour
   $(".time-block").each(function () {
